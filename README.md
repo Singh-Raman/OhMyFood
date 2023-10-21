@@ -1,9 +1,7 @@
-# ohmyfood-mock-p2
+# P2-ohmyfood
 
-Website like: https://
+Website like: https://singh-raman.github.io/OhMyFood/
 
-github repo: https://github.com/
 
 The website is a mock page for restaurant menus. it is created using HTML and CSS(SASS).
-
 
