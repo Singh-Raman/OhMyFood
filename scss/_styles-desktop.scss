@@ -1,0 +1,65 @@
+@import "_variables";
+
+@media (min-width: 992px) {
+  // -------------- Heather---------------
+  header {
+    .box-max-w {
+      width: 100%;
+      @include desktop-max-w;
+      margin: auto;
+    }
+  }
+  main {
+    // -------------- How it works ---------------
+    .tablet-desktop-box {
+      max-width: 1200px; //desktop max-width ( - margins 25 * 2 )
+      margin: auto;
+    }
+    .howItWorks {
+      @include desktop-max-w;
+      margin: auto;
+    }
+    // -------------- Restaurants ---------------
+    .restaurants {
+      max-width: 1214px;
+      margin: auto;
+      .res-group {
+        h2 {
+          margin-left: 0;
+          margin-right: 0;
+
+          @include desktop-max-w;
+        }
+        .res-cards {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0px;
+
+          .res-card-one {
+            margin-left: 15px;
+            margin-right: 15px;
+            height: 340px;
+
+            height: 340px;
+            .res-card-img {
+              img {
+                height: 250px;
+              }
+            }
+            .res-card-one-info {
+              .res-card-one-logo-02 {
+                right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      @include desktop-max-w;
+    }
+  }
+}

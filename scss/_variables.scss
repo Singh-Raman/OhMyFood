@@ -1,0 +1,66 @@
+$purple: #9356dc;
+$pink: #ff79da;
+$green: #99e2d0;
+$dark-gray: #eaeaea;
+$light-gray: #f6f6f6;
+$light-dark: #363636;
+$font-roboto: "Roboto", sans-serif;
+$font-Shrikhand: "Shrikhand", cursive;
+
+@mixin gradient {
+  background: rgb(147, 86, 220);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    P rgba(221, 106, 189, 1) 81%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(221, 106, 189, 1) 81%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(221, 106, 189, 1) 81%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#dd6abd",GradientType=1);
+}
+
+@mixin mobile-max-w {
+  max-width: 500px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@mixin mobile-px {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin margin-tablet {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+@mixin desktop-max-w {
+  max-width: 1250px;
+}
+
+@mixin flex($justify-c, $direction) {
+  display: flex;
+  justify-content: $justify-c;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin shadow-menu-container {
+  -webkit-box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+  box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+}
+
+@mixin animateBox($index, $delay) {
+  .menu-container:nth-child(#{$index}) {
+    animation: fadeInUp 0.4s ease-in-out forwards;
+    animation-delay: $delay;
+  }
+}

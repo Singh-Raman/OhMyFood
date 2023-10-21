@@ -1,0 +1,75 @@
+@media (min-width: 992px) {
+  header .header-menu {
+    max-width: 1250px;
+    margin: auto;
+  }
+
+  main .main-image {
+    max-width: 1250px;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) and (min-width: 1251px) {
+  main .main-image img {
+    border-radius: 100px 100px 0 0;
+  }
+}
+@media (min-width: 992px) {
+  main .menu {
+    max-width: 1250px;
+    margin: auto;
+    border-radius: 0;
+    position: relative;
+  }
+  main .menu .title-restaurant {
+    position: absolute;
+    left: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  main .menu .title-restaurant button {
+    position: absolute;
+    text-align: left;
+    margin-left: 50px;
+  }
+  main .menu .menu-list {
+    max-width: unset;
+    position: unset;
+    margin-top: 50px;
+  }
+  main .menu .menu-list .menu-category {
+    position: unset;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  main .menu .menu-list .sub-menu {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main .menu .menu-list .menu-text {
+    overflow: hidden;
+  }
+  main .menu .menu-list .menu-text h3 {
+    white-space: nowrap !important;
+  }
+  main .menu .menu-list .menu-container {
+    width: 32%;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer-info {
+    max-width: 1250px;
+  }
+  footer .footer-info:hover, footer .footer-info:active {
+    color: rgba(255, 255, 255, 0.538);
+  }
+}

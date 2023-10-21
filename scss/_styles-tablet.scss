@@ -1,0 +1,121 @@
+@import "_variables";
+
+@media (min-width: 768px) {
+  // -------------- Header -------------------
+  body {
+    min-height: 100vh;
+    @include flex(space-between, column);
+    align-items: unset;
+  }
+  header {
+    @include flex(space-between, row);
+    .box-max-w {
+      @include flex(space-between, row);
+      .logo {
+        @include margin-tablet;
+        width: 200px;
+        position: relative;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+      }
+      .location {
+        margin: 0;
+        width: 250px;
+        border-radius: 10px;
+        padding: 8px 0;
+        @include margin-tablet;
+      }
+    }
+  }
+
+  main {
+    margin-top: 100px;
+    // height: calc(100vh - 203px - 100px);
+    overflow: auto;
+    .tablet-desktop-box {
+      border-radius: 15px;
+      margin: auto;
+      @include flex(center, row);
+      background-color: $dark-gray;
+      .intro {
+        flex: 1;
+        background-color: transparent;
+      }
+      .howItWorks {
+        flex: 0.7;
+      }
+    }
+    // -------------- Intro ---------------
+    .intro {
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        max-width: 550px;
+      }
+    }
+    // -------------- How it works ---------------
+    .howItWorks {
+      text-align: center;
+    }
+    // -------------- Restaurants ---------------
+    .restaurants {
+      background-color: transparent;
+
+      // --------------    Restaurants  each group  ----------------
+      .res-group {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: unset;
+        width: 100%;
+        h2 {
+          @include margin-tablet;
+          padding-left: 15px;
+        }
+        .res-cards {
+          @include margin-tablet;
+          @include flex(start, row);
+
+          .res-card-one {
+            height: 330px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .res-card-img {
+              img {
+                height: 230px;
+              }
+            }
+            .res-card-one-info {
+              .res-card-one-logo-02 {
+                right: 9px;
+              }
+            }
+
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      max-width: unset;
+      text-align: center;
+      @include margin-tablet;
+      margin: auto;
+      .footer-into-links {
+        margin: auto;
+        max-width: 700px;
+        @include flex(space-between, row);
+        a {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

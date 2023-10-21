@@ -1,0 +1,387 @@
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+}
+
+// -------------- body / general ---------------
+body {
+  font-family: $font-roboto;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+}
+textarea,
+input[type="search"],
+input[type="button"],
+input[type="submit"] {
+  border-radius: 0px;
+  -webkit-border-radius: 0;
+  background-color: inherit;
+}
+
+// -------------- loading animation ---------------
+
+.container-loader {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  animation: moveBackward 0.7s 0.7s ease forwards;
+  .title-loader {
+    margin: auto;
+    text-align: center;
+  }
+  .loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 30%;
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      inset: 0;
+      box-shadow: 0 0 10px 2px rgba(243, 241, 241, 0.3) inset;
+    }
+    &::after {
+      box-shadow: 0 3px 0 #ca259b inset;
+      animation: rotate 1s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveBackward {
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+// -------------- Header ---------------
+header {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  @include flex(center, column);
+  z-index: 1;
+  visibility: hidden;
+  // -------------- Appear after animation ---------------
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
+  .logo {
+    top: 0;
+    position: absolute;
+    padding: 13px 0;
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
+  }
+  .box-max-w {
+    @include flex(center, column);
+    width: 100%;
+    p {
+      font-family: $font-Shrikhand;
+      font-size: 2rem;
+      margin: 0rem; //root em 1rem = 16px root - em is based on current font size
+    }
+
+    .location {
+      margin-top: 63px;
+      width: 100%;
+      text-align: center;
+      background-color: $dark-gray;
+      padding: 15px 0;
+      form {
+        @include flex(center, row);
+
+        @include mobile-max-w;
+        i {
+          margin-left: 20px;
+        }
+        // -------------- Form - Input ---------------
+        input {
+          padding: 3px 0;
+          border: none;
+          background-color: inherit;
+          text-align: center;
+
+          &:active,
+          &:focus,
+          &:focus-visible {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+main {
+  // -------------- Appear after animation ---------------
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
+  margin-top: 110px;
+  // -------------- Intro ---------------
+  .intro {
+    position: relative;
+    background-color: $light-gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    @include mobile-px;
+
+    p {
+      max-width: 350px;
+      margin: auto;
+      padding-top: 10px;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    a {
+      text-decoration: none;
+      position: relative;
+      padding: 13px 25px;
+      border-radius: 20px;
+      color: white;
+      border: none;
+      @include gradient;
+      font-family: $font-roboto;
+      font-weight: 500;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0px 7px 17px 2px #d3cdd2;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      filter: brightness(110%);
+    }
+  }
+  //-------------- How it workes --------------
+  .howItWorks {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include mobile-px;
+    @include mobile-max-w;
+    margin: auto;
+    text-align: left;
+    @include flex(center, column);
+    width: 100%;
+    .howItWorks-one-card {
+      width: 300px;
+      @include flex(start, row);
+      margin: 20px 0;
+      padding: 5px;
+      background-color: $light-gray;
+      border-radius: 20px;
+      -webkit-box-shadow: 2px 2px 14px 0px #d0d0d0;
+      box-shadow: 2px 2px 14px 0px #d0d0d0;
+      font-weight: 500;
+      position: relative;
+      i {
+        font-size: 18px;
+        margin: 0 20px;
+      }
+      p:first-child {
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+        background-color: $purple;
+        padding: 3px 7px;
+        border-radius: 10px;
+        position: absolute;
+        left: -10px;
+      }
+    }
+    .howItWorks-one-card:last-child {
+      background-color: fade-out($purple, 0.85);
+    }
+  }
+  // -------------- Restaurants ---------------
+  .restaurants {
+    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: $light-gray;
+    a:hover,
+    a:focus,
+    a:active {
+      filter: brightness(110%);
+    }
+    // --------------    Restaurants  each group  ----------------
+    .res-group {
+      @include mobile-max-w;
+      width: 330px;
+      margin: auto;
+
+      display: block;
+      color: inherit;
+
+      @include flex(start, column);
+      h2 {
+        text-align: left;
+        width: 300px;
+      }
+
+      // --------------    Restaurants  each card  ----------------
+
+      .res-cards {
+        height: 100%;
+        .res-card-one {
+          height: 220px;
+          width: 320px;
+          border-radius: 15px;
+          /* offset-x | offset-y | blur-radius | color */
+          box-shadow: 0px 5px 5px rgba(218, 215, 215, 0.391);
+          background-color: white;
+          margin-bottom: 20px;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+          .res-card-img {
+            position: relative;
+            img {
+              border-radius: 15px 15px 0 0;
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+            }
+            p {
+              position: absolute;
+              font-size: 15px;
+              color: #008766;
+              top: 0px;
+              right: 10px;
+              background-color: $green;
+              padding: 6px 23px;
+              border-radius: 3px;
+            }
+          }
+
+          .res-card-one-info {
+            position: relative;
+            padding: 10px 35px 20px 15px;
+            @include flex(space-between, row);
+            .res-card-one-text-01 {
+              p:first-child {
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 5px;
+              }
+              p:last-child {
+                font-size: 15px;
+                margin: 0;
+                font-weight: 300;
+              }
+            }
+            .res-card-one-logo-02 {
+              position: absolute;
+              top: 20px;
+              right: 15px;
+
+              .heart {
+                position: relative;
+                width: 30px;
+                height: 30px;
+
+                fill: transparent;
+                :hover,
+                :active {
+                  cursor: pointer;
+                  animation: opacity 0.4s ease-in forwards;
+                  fill: url(#gradient01);
+                  fill: url(#gradient02);
+                  fill: url(#gradient03);
+                  fill: url(#gradient04);
+                  stroke: #ffffff;
+                }
+
+                @keyframes opacity {
+                  100% {
+                    opacity: 1;
+                  }
+                  50% {
+                    opacity: 0.5;
+                  }
+                  0% {
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// -------------- Footer ---------------
+footer {
+  // -------------- Appear after animation ---------------
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
+  margin-top: 30px;
+  width: 100%;
+  background-color: $light-dark;
+  color: white;
+  padding: 20px 0 40px 0;
+  padding-left: 20px;
+
+  p {
+    font-size: 22px;
+    color: white;
+    font-family: $font-Shrikhand;
+    letter-spacing: 1px;
+  }
+  .footer-info {
+    @include mobile-max-w;
+    margin: 0;
+    .footer-into-links {
+      @include flex(start, column);
+      align-items: start;
+    }
+    a {
+      margin: 5px 0;
+      text-decoration: none;
+      color: white;
+      i {
+        padding-right: 10px;
+      }
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.538);
+      }
+    }
+  }
+}
+
+// -------------- Imports media ---------------
+@import "_styles-tablet";
+@import "_styles-desktop";

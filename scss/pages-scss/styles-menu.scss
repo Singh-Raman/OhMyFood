@@ -1,0 +1,371 @@
+// all menue's mobile styles
+@import "../variables";
+
+* {
+  box-sizing: border-box;
+}
+
+// -------------- body / general ---------------
+body {
+  font-family: $font-roboto;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+}
+
+// -------------- Header ---------------
+
+header {
+  width: 100vw;
+  position: static;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  z-index: 1;
+
+  .header-menu {
+    @include flex(center, row);
+    @include mobile-max-w;
+    a {
+      text-decoration: unset;
+      margin: 0;
+    }
+
+    .logo {
+      font-family: $font-Shrikhand;
+      margin: auto;
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+// -------------- Main ------------------
+main {
+  position: relative;
+  margin-top: 20px;
+  // -------------- Main - IMAGE ------------------
+  .main-image {
+    z-index: -1;
+    height: 300px;
+    padding-top: 40px;
+    img {
+      height: 100%;
+
+      width: 100%;
+      object-fit: cover;
+    }
+    // -------------- Main - Title - Fav Icon ------------------
+  }
+  // -------------- Menu Section ------------------
+  .menu {
+    position: relative;
+    margin-top: -40px;
+    z-index: 0;
+    padding: 50px 0;
+    border-radius: 30px 30px 0 0px;
+    background-color: $light-gray;
+
+    .title-restaurant {
+      @include mobile-max-w;
+      position: relative;
+      margin: auto;
+      margin-bottom: 30px;
+      p {
+        margin: 0;
+        font-size: 24px;
+        font-family: $font-Shrikhand;
+      }
+      button {
+        background-color: inherit;
+        border: none;
+      }
+      .fav-icon {
+        position: absolute;
+        top: -2px;
+        right: 20px;
+
+        .heart {
+          position: relative;
+          width: 30px;
+          height: 30px;
+
+          fill: transparent;
+          :hover,
+          :active {
+            animation: opacity 0.4s ease-in;
+            fill: url(#gradient);
+            stroke: #ffffff;
+            cursor: pointer;
+          }
+
+          @keyframes opacity {
+            100% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0.5;
+            }
+            0% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    // -------------- Menu Items------------------
+    .menu-list {
+      @include mobile-max-w;
+      // -------------- Menu ENTREES------------------
+      .menu-category {
+        position: relative;
+        margin-top: 50px;
+        // -------------- section title------------------
+        .menu-section {
+          font-size: 19px;
+          font-weight: 300;
+          letter-spacing: 0.7px;
+          margin: 20px 0;
+          margin-left: 5px;
+          // -------------- Menu ENTREES------------------
+          &::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background: $green;
+            margin-top: 5px;
+            border-radius: 3px;
+            width: 0;
+          }
+
+          @keyframes lineAnimation {
+            to {
+              width: 50px;
+            }
+          }
+        }
+        .delay-one::after {
+          animation: lineAnimation 0.7s ease forwards;
+        }
+        .delay-two::after {
+          animation: lineAnimation 0.7s ease forwards 0.3s;
+        }
+        .delay-three::after {
+          animation: lineAnimation 0.7s ease forwards 0.6s;
+        }
+        .sub-menu {
+          // -------------- Each BOX ------------------
+          .menu-container {
+            position: relative;
+            margin-bottom: 15px;
+            max-width: 470px;
+            overflow: hidden;
+            border-radius: 18px;
+            background-color: white;
+            @include flex(space-between, row);
+            @include shadow-menu-container;
+            animation: fadeInUp 1s ease-in-out;
+            opacity: 0;
+
+            &:hover,
+            &:active {
+              cursor: pointer;
+            }
+            // -------------- Item BOX text side hover------------------
+            &:hover .menu-text-container,
+            &:active .menu-text-container {
+              width: 77%;
+              transition: width 0.5s ease;
+            }
+
+            &:not(:hover) .menu-text-container {
+              width: 100%;
+              transition: width 0.5s ease;
+            }
+            // -------------- Item BOX checkbox hover------------------
+            &:hover .menu-checkbox,
+            &:active .menu-checkbox {
+              transform: translateX(-100%);
+              transition: transform 0.6s ease;
+              .menu-checkbox-icon i {
+                transform: rotate(350deg);
+                transition: transform 0.6s ease;
+              }
+            }
+
+            &:not(:hover) .menu-checkbox {
+              transition: transform 0.8s ease;
+              .menu-checkbox-icon i {
+                transform: rotate(0deg);
+              }
+            }
+
+            .menu-text-container {
+              width: 100%;
+              padding: 10px 0;
+              padding-left: 14px;
+              @include flex(space-between, row);
+
+              .menu-text {
+                max-width: 85%;
+                h3 {
+                  font-weight: 500;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  margin: 0;
+                  padding: 0;
+                }
+                p {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  margin: 0;
+                  padding: 5px 0;
+                  padding-right: 2px;
+                  font-size: 15px;
+                  font-weight: 300;
+                }
+              }
+              // -------------- Item BOX price------------------
+              .price {
+                padding-top: 25px;
+                width: 40px;
+                font-weight: 500;
+                font-size: 18px;
+                padding-right: 5px;
+                padding-left: 7px;
+                margin-right: 10px;
+              }
+            }
+
+            .menu-checkbox {
+              width: 80px;
+              position: static;
+              align-self: stretch;
+              background-color: $green;
+              padding: 0;
+              margin: 0;
+
+              margin-right: -80px;
+              .menu-checkbox-icon {
+                position: relative;
+                height: 100%;
+
+                i {
+                  top: 35%;
+                  right: 30%;
+                  transform: rotate(50deg);
+                  font-size: 30px;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @for $i from 1 through 4 {
+          .entrees {
+            @include animateBox($i, #{($i - 1) * 0.1s});
+          }
+          .main-dish {
+            @include animateBox($i, #{($i + 1) * 0.1s});
+          }
+          .desert {
+            @include animateBox($i, #{($i + 3) * 0.1s});
+          }
+        }
+      }
+    }
+    // -------------- Button order------------------
+    .btn-container {
+      width: 100%;
+      padding: 20px 0 10px 0;
+      margin: unset;
+      display: flex;
+      .btn-submit {
+        cursor: pointer;
+        width: 180px;
+        padding: 13px 25px;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        box-shadow: 0px 7px 17px 2px #d3cdd2;
+        background: rgb(147, 86, 220);
+        background: -moz-linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          P rgb(221, 106, 189) 81%
+        );
+        background: -webkit-linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          rgb(221, 106, 189) 81%
+        );
+        background: linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          rgb(221, 106, 189) 81%
+        );
+        margin: auto;
+
+        &:hover,
+        &:active {
+          filter: brightness(110%);
+        }
+      }
+    }
+  }
+}
+
+// -------------- Footer ---------------
+footer {
+  // margin-top: 30px;
+  width: 100%;
+  background-color: $light-dark;
+  color: white;
+  padding: 20px 0 40px 0;
+
+  p {
+    font-size: 22px;
+    color: white;
+    font-family: $font-Shrikhand;
+    letter-spacing: 1px;
+  }
+  .footer-info {
+    @include mobile-max-w;
+    padding-left: 25px;
+    margin: 0;
+    .footer-into-links {
+      @include flex(start, column);
+      align-items: start;
+    }
+    a {
+      margin: 5px 0;
+      text-decoration: none;
+      color: white;
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.538);
+      }
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+// -------------- Imports media ---------------
+
+@import "./_styles-menu-tablet";
+@import "./_styles-menu-desktop";

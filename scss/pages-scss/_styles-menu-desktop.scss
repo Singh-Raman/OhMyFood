@@ -1,0 +1,83 @@
+@import "../_variables";
+$width: 1250px;
+
+@media (min-width: 992px) {
+  // -------------- Header ------------------
+  header {
+    .header-menu {
+      @include desktop-max-w;
+      margin: auto;
+    }
+  }
+  // -------------- Main ------------------
+  main {
+    .main-image {
+      @include desktop-max-w;
+      margin: auto;
+      img {
+        @media (min-width: 1251px) {
+          border-radius: 100px 100px 0 0;
+        }
+      }
+    }
+    // -------------- Menu Section ------------------
+
+    .menu {
+      @include desktop-max-w;
+      margin: auto;
+      border-radius: 0;
+      position: relative;
+      // --------------  TITLE ------------------
+      .title-restaurant {
+        position: absolute;
+        left: 20px;
+        text-align: right;
+        @include flex(center, row-reverse);
+        button {
+          position: absolute;
+          text-align: left;
+          margin-left: 50px;
+        }
+      }
+      .menu-list {
+        max-width: unset;
+        position: unset;
+        margin-top: 50px;
+
+        .menu-category {
+          position: unset;
+          margin-top: 5px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .sub-menu {
+          margin-top: 20px;
+          width: 100%;
+          @include flex(space-between, row);
+          flex-wrap: wrap;
+          //-------------- Item BOX text ------------------
+        }
+        .menu-text {
+          overflow: hidden;
+          h3 {
+            white-space: nowrap !important;
+          }
+        }
+        .menu-container {
+          width: 32%;
+        }
+      }
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      @include desktop-max-w;
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.538);
+      }
+    }
+  }
+}

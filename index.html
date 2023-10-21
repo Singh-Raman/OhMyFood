@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./dist/styles/styles.css" />
+
+    <title>Ohmyfood</title>
+  </head>
+
+  <!-------------- body --------------->
+  <body>
+    <div class="container-loader">
+      <div class="loader"></div>
+    </div>
+    <!-------------- header --------------->
+    <header>
+      <div class="box-max-w">
+        <div class="logo" >
+          <p>ohmyfood</p>
+        </div>
+        <div class="location">
+          <form>
+            <!-- icon and the search input -->
+            <i class="fa-solid fa-location-dot" style="color: #3d3d3d"></i>
+            <input 
+              name="location-search"
+              placeholder="Search..."
+              value="Paris, Belleville"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="tablet-desktop-box">
+        <!-------------- Intro --------------->
+        <section class="intro">
+          <h1>Book the menu you like</h1>
+
+          <p>Discover top-of-the-art restaurants we picked for you</p>
+
+          <a href="#restaurants" role="button">Explore our restaurants</a>
+        </section>
+        <!-------------- How it workes --------------->
+        <section class="howItWorks">
+          <div class="howItWorks-cards">
+            <h2>How it works</h2>
+            <div class="howItWorks-one-card">
+              <p>1</p>
+              <i
+                class="fa-solid fa-mobile-screen-button"
+                style="color: #7e7e7e"
+              ></i>
+              <p>Chose a restaurant</p>
+            </div>
+            <div class="howItWorks-one-card">
+              <p>2</p>
+              <i class="fa-solid fa-list-ul" style="color: #7e7e7e"></i>
+              <p>Create your menu</p>
+            </div>
+            <div class="howItWorks-one-card">
+              <p>3</p>
+              <i class="fa-solid fa-shop" style="color: #9356dc"></i>
+              <p>Go enjoy it at the restaurant</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-------------- Restaurants --------------->
+      <section class="restaurants" id="restaurants">
+        <div class="res-group">
+          <h2>Restaurants</h2>
+          <!-------------- Restaurants cards--------------->
+
+          <div class="res-cards">
+            <!-------------- Restaurants card 1--------------->
+            <div class="res-card-one">
+             <!------- image ----------->
+                <div class="res-card-img">
+                  <a href="pages/the-full-palette.html">
+
+                  <img
+                    src="./images/the-full-palette.jpg"
+                    alt="res-food-image"
+                  />
+                </a>
+                  <p>New</p>
+                </div>
+              <!------- text and heart ----------->
+                <div class="res-card-one-info">
+                  <div class="res-card-one-text-01">
+                    <a href="pages/the-full-palette.html">
+                    <p>The Full Palette</p>
+                    <p>New York</p>
+                    </a>
+                  </div>
+               <!------- heart icon ----------->
+                  <div class="res-card-one-logo-02">
+                    <svg
+                      class="heart"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#000000"
+                      stroke-width="0.8640000000000001"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="gradient01"
+                          x1="0.5"
+                          y1="0"
+                          x2="0.5"
+                          y2="1"
+                        >
+                          <stop offset="0%" stop-color="#ffffb5" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                          <stop offset="100%" stop-color="#ff79da" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                        </linearGradient>
+                      </defs>
+                      <rect fill="url(#0)"  height="" width=""/>
+
+                      <g id="SVGRepo_bgCarrier01" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier01"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier01">
+                        <path
+                          d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                          fill=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+            </div>
+
+            <!-------------- Restaurants card 2--------------->
+            <div class="res-card-one">
+                 <!------- image ----------->
+                <div class="res-card-img">
+                  <a href="pages/the-enchanted-plate.html">
+                  <img
+                    src="./images/the-enchanted-plate.jpg"
+                    alt="res-food-image"
+                  />
+                </a>
+                  <p>New</p>
+                </div>
+                 <!------- text and heart ----------->
+                <div class="res-card-one-info">
+                  <div class="res-card-one-text-01">
+                    <a href="pages/the-enchanted-plate.html">
+
+                    <p>The Enchanted Plate</p>
+                    <p>New York</p>
+                    </a>
+                  </div>
+           
+                  <div class="res-card-one-logo-02">
+                    <svg
+                      class="heart"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#000000"
+                      stroke-width="0.8640000000000001"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="gradient02"
+                          x1="0.5"
+                          y1="0"
+                          x2="0.5"
+                          y2="1"
+                        >
+                          <stop offset="0%" stop-color="#ffffb5" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                          <stop offset="100%" stop-color="#ff79da" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                        </linearGradient>
+                      </defs>
+                      <rect fill="url(#0)" height="" width="" />
+
+                      <g id="SVGRepo_bgCarrier02" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier02"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier02">
+                        <path
+                          d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                          fill=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+   
+            </div>
+
+            <!-------------- Restaurants card 3--------------->
+            <div class="res-card-one">
+                  <!------- image ----------->
+                <div class="res-card-img">
+                  <a href="pages/bastille.html">
+                  <img src="./images/bastille.jpg" alt="res-food-image" />
+                </a>
+                </div>
+                  <!------- text and heart ----------->
+                <div class="res-card-one-info">
+                  <div class="res-card-one-text-01">
+                    <a href="pages/bastille.html">
+                    <p>Bastille</p>
+                    <p>New York</p>
+                    </a>
+                  </div>
+         
+                  <div class="res-card-one-logo-02">
+                    <svg
+                      class="heart"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#000000"
+                      stroke-width="0.8640000000000001"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="gradient03"
+                          x1="0.5"
+                          y1="0"
+                          x2="0.5"
+                          y2="1"
+                        >
+                          <stop offset="0%" stop-color="#ffffb5" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                          <stop offset="100%" stop-color="#ff79da" />
+                          <stop offset="0%" stop-color="#9356dc" />
+                        </linearGradient>
+                      </defs>
+                      <rect fill="url(#0)" height="" width=""/>
+
+                      <g id="SVGRepo_bgCarrier03" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier03"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier03">
+                        <path
+                          d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                          fill=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+       
+            </div>
+            <!-------------- Restaurants card 4--------------->
+            <div class="res-card-one">
+          <!------- image ----------->
+              <div class="res-card-img">
+                <a href="pages/le-gourmand.html">
+                <img src="./images/le-gourmand.jpg" alt="res-food-image" />
+                </a>
+              </div>
+          <!------- text and heart ----------->
+              <div class="res-card-one-info">
+                <div class="res-card-one-text-01">
+                  <a href="pages/le-gourmand.html">
+
+                  <p>Le Gourmand</p>
+                  <p>New York</p>
+                </a>
+                </div>
+           
+                <div class="res-card-one-logo-02">
+                  <svg
+                    class="heart"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="#000000"
+                    stroke-width="0.8640000000000001"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="gradient04"
+                        x1="0.5"
+                        y1="0"
+                        x2="0.5"
+                        y2="1"
+                      >
+                        <stop offset="0%" stop-color="#ffffb5" />
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="0%" stop-color="#9356dc" />
+                        <stop offset="100%" stop-color="#ff79da" />
+                        <stop offset="0%" stop-color="#9356dc" />
+                      </linearGradient>
+                    </defs>
+                    <rect fill="url(#0)" height="" width=""/>
+
+                    <g id="SVGRepo_bgCarrier04" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier04"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier04">
+                      <path
+                        d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                        fill=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-------------- Footer --------------->
+    <footer>
+      <div class="footer-info">
+        <p>ohmyfood</p>
+        <div class="footer-into-links">
+          <a href="/"
+            ><i class="fa-solid fa-utensils" style="color: #ffffff"></i> Suggest
+            a restaurant</a
+          >
+          <a href="/"
+            ><i
+              class="fa-solid fa-handshake-simple fa-sm"
+              style="color: #ffffff"
+            ></i
+            >Become a partner</a
+          >
+          <a href="/">Legal</a>
+               <!------- opens email  ----------->
+          <a href="mailto:abc@example.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

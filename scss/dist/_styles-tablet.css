@@ -1,0 +1,125 @@
+@media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  header .box-max-w {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  header .box-max-w .logo {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 200px;
+    position: relative;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+  }
+  header .box-max-w .location {
+    margin: 0;
+    width: 250px;
+    border-radius: 10px;
+    padding: 8px 0;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  main {
+    margin-top: 100px;
+    overflow: auto;
+  }
+  main .tablet-desktop-box {
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #eaeaea;
+  }
+  main .tablet-desktop-box .intro {
+    flex: 1;
+    background-color: transparent;
+  }
+  main .tablet-desktop-box .howItWorks {
+    flex: 0.7;
+  }
+  main .intro h1 {
+    font-size: 36px;
+  }
+  main .intro p {
+    max-width: 550px;
+  }
+  main .howItWorks {
+    text-align: center;
+  }
+  main .restaurants {
+    background-color: transparent;
+  }
+  main .restaurants .res-group {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: unset;
+    width: 100%;
+  }
+  main .restaurants .res-group h2 {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 15px;
+  }
+  main .restaurants .res-group .res-cards {
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .restaurants .res-group .res-cards .res-card-one {
+    height: 330px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one .res-card-img img {
+    height: 230px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 {
+    right: 9px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one p {
+    text-align: left;
+  }
+
+  footer .footer-info {
+    max-width: unset;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin: auto;
+  }
+  footer .footer-info .footer-into-links {
+    margin: auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  footer .footer-info .footer-into-links a {
+    margin-top: 20px;
+  }
+}

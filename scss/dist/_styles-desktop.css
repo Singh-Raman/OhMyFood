@@ -1,0 +1,46 @@
+@media (min-width: 992px) {
+  header .box-max-w {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+  }
+
+  main .tablet-desktop-box {
+    max-width: 1200px;
+    margin: auto;
+  }
+  main .howItWorks {
+    max-width: 1250px;
+    margin: auto;
+  }
+  main .restaurants {
+    max-width: 1214px;
+    margin: auto;
+  }
+  main .restaurants .res-group h2 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1250px;
+  }
+  main .restaurants .res-group .res-cards {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one {
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 340px;
+    height: 340px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one .res-card-img img {
+    height: 250px;
+  }
+  main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 {
+    right: 15px;
+  }
+
+  footer .footer-info {
+    max-width: 1250px;
+  }
+}
